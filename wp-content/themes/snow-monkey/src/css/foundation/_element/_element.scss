@@ -1,0 +1,84 @@
+input, textarea, keygen, select, button {
+  font-size: 100%;
+}
+
+a {
+  color: $color-accent;
+}
+
+h1 {
+  @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.5);
+
+  @include _media-min(md) {
+    @include _font-size-line-height($_base-font-size * $_h1-font-size-scale / 1.25);
+  }
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h1-font-size-scale);
+  }
+}
+
+h2 {
+  @include _font-size-line-height($_base-font-size * $_h2-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h2-font-size-scale);
+  }
+}
+
+h3 {
+  @include _font-size-line-height($_base-font-size * $_h3-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h3-font-size-scale);
+  }
+}
+
+h4 {
+  @include _font-size-line-height($_base-font-size * $_h4-font-size-scale / 1.25);
+
+  @include _media-min(lg) {
+    @include _font-size-line-height($_base-font-size * $_h4-font-size-scale);
+  }
+}
+
+iframe {
+  max-width: 100%;
+}
+
+blockquote {
+  position: relative;
+  background-image: url(../img/blockquote/top.svg), url(../img/blockquote/bottom.svg);
+  background-repeat: no-repeat;
+  background-position: 0 0, 100% 100%;
+  background-size: 35px;
+  border-left: none;
+  @include _padding(.75, .5, .5, 1.5);
+  @include _content(.5);
+
+  @include _media-min(md) {
+    @include _margin-right(1);
+    @include _margin-left(1);
+    background-size: 70px;
+    @include _padding(1, 1, .75, 2);
+  }
+
+  &::before {
+    content: '';
+    @include _position(absolute, $_base-font-size-px, null, null, $_base-font-size-px);
+    display: block;
+    @include _square($_base-font-size-px + 2);
+    background-image: url(../img/blockquote/icon.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @include _media-min(md) {
+      @include _square($_base-font-size-px * 1.5);
+    }
+  }
+
+  cite {
+    @include _font-size-line-height($_base-font-size-px - 2);
+    color: $_color-gray;
+  }
+}

@@ -1,0 +1,54 @@
+.wpaw-slider {
+  &__canvas {
+    visibility: hidden;
+
+    &.slick-initialized {
+      visibility: visible;
+    }
+  }
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__item {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+
+  &__body {
+    position: relative;
+  }
+
+  &__item-title {
+    color: #fff;
+  }
+
+  &__item-summary {
+    color: #fff;
+  }
+
+  &__item-more {
+    border: 1px solid #fff;
+    color: #fff;
+  }
+
+  .slick-list {
+    height: auto !important;
+  }
+
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slide {
+    > div > div {
+      display: block !important;
+    }
+  }
+}

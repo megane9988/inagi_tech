@@ -1,0 +1,1 @@
+.js-bg-parallax{background-size:cover;background-position:50% 50%;background-repeat:no-repeat;opacity:0;transition:opacity .1s ease-in}.js-bg-parallax[data-is-loaded=true]{opacity:1}.js-bg-parallax[data-is-mobile=true]{background-attachment:scroll!important}@media (min-width:1024px){.js-bg-parallax{background-attachment:fixed}}

@@ -1,0 +1,64 @@
+.wpaw-showcase {
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  &__mask {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: '';
+    background-color: rgba(#000, .2);
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__figure {
+    text-align: center;
+  }
+
+  &__title {
+    color: #fff;
+  }
+
+  &__lead {
+    color: #fff;
+  }
+
+  &__action {
+    text-align: center;
+  }
+
+  &__more {
+    display: inline-block;
+    background-color: #fff;
+    line-height: 1;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /**
+   * For right image
+   */
+  &--format-1 {
+  }
+
+  /**
+   * For left image
+   */
+  &--format-2 {
+  }
+
+  /**
+   * For bottom image
+   */
+  &--format-3 {
+  }
+}
